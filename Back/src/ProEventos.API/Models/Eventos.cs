@@ -1,8 +1,8 @@
 namespace ProEventos.API.Models
 {
     public class Eventos
-    {
-        public int EventoId { get; set; }
+    {  
+        public int EventosId { get; set; }
 
         public string Local { get; set; }
 
