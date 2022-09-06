@@ -14,7 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using  ProEventos.API.Data;
+using  ProEventos.API.Persistence;
 using  Microsoft.EntityFrameworkCore;
 using  Microsoft.EntityFrameworkCore.Sqlite;
 
@@ -32,7 +32,7 @@ namespace ProEventos.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<ProEventosContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
             services.AddControllers();
